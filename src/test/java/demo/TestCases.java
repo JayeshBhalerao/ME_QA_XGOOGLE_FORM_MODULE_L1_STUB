@@ -15,17 +15,41 @@ import java.util.logging.Level;
 import demo.wrappers.Wrappers;
 
 public class TestCases {
+
     ChromeDriver driver;
+    Wrappers wrapper;
 
     /*
-     * TODO: Write your tests here with testng @Test annotation. 
+     * TODO: Write your tests here with testng @Test annotation.
      * Follow `testCase01` `testCase02`... format or what is provided in instructions
      */
 
-     
     /*
      * Do not change the provided methods unless necessary, they will help in automation and assessment
      */
+
+    @Test
+    public void testCase01() throws InterruptedException{
+
+        wrapper.navigateURL("https://forms.gle/wjPkzeSEk1CM7KgGA");
+        wrapper.waitForPageLoad();
+        wrapper.enterText("Why are you practicing Automation?", "I want to be the best QA Engineer! ");
+        wrapper.enterText("Name", "Crio Learner");
+        wrapper.radioButton("9");
+        wrapper.checkBox("jAva, seleNium, TestNG");
+        wrapper.dropDown("Mr");
+        wrapper.date();
+        wrapper.time("7", "30");
+        // wrapper.time("7", "30", "AM");
+        wrapper.submit();
+        wrapper.waitForPageLoad();
+        wrapper.successfullCompletion("Thanks");
+
+
+    }
+
+
+
     @BeforeTest
     public void startBrowser()
     {
@@ -42,18 +66,20 @@ public class TestCases {
         options.setCapability("goog:loggingPrefs", logs);
         options.addArguments("--remote-allow-origins=*");
 
-        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "build/chromedriver.log"); 
+        System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "build/chromedriver.log");
 
         driver = new ChromeDriver(options);
 
         driver.manage().window().maximize();
+
+        wrapper = new Wrappers(driver);
     }
 
-    @AfterTest
-    public void endTest()
-    {
-        driver.close();
-        driver.quit();
+    // @AfterTest
+    // public void endTest()
+    // {
+    //     driver.close();
+    //     driver.quit();
 
-    }
+    // }
 }
