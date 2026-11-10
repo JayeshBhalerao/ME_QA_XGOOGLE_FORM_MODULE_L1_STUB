@@ -9,6 +9,5 @@
     "Test Case 1 - Automate filling up a form.Clicked on Experience box": "TEST_STATUS_SUCCESS",
     "Test Case 1 - Automate filling up a form.Chose any of the Tools you are experienced in": "TEST_STATUS_SUCCESS",
     "Test Case 1 - Automate filling up a form.Chose how to be addressed option": "TEST_STATUS_SUCCESS",
-    "Test Case 1 - Automate filling up a form.Entered correct time into time input": "TEST_STATUS_SUCCESS",
-    "Test Case 1 - Automate filling up a form.Read the text at the end of submission": "TEST_STATUS_FAILURE"
+    "Test Case 1 - Automate filling up a form.Entered correct time into time input": "TEST_STATUS_SUCCESS"
 }

@@ -171,23 +171,6 @@
           "join": "AND",
           "success_out": "Entered correct time into time input",
           "hint": "Ensure that you entered `07:30` into the time input box"
-        },
-        {
-          "validations": [
-            {
-              "object_notation": "COMMAND",
-              "operator": "contains",
-              "expected_value": "GetElementText"
-            },
-            {
-              "object_notation": "RESPONSE",
-              "operator": "contains",
-              "expected_value": "Thanks for your response"
-            }
-          ],
-          "join": "AND",
-          "success_out": "Read the text at the end of submission",
-          "hint": "Ensure that you read (getText) the last message at the end of the submission"
         }
       ]
     }

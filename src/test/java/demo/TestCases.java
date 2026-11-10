@@ -43,7 +43,7 @@ public class TestCases {
         // wrapper.time("7", "30", "AM");
         wrapper.submit();
         wrapper.waitForPageLoad();
-        wrapper.successfullCompletion("Thanks");
+        wrapper.successfullCompletion("Thanks for your response, Automation Wizard!");
 
 
     }
